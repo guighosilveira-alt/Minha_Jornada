@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Jornada App - Grupo Zaffari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TELA INICIAL (TELA A) -->
+    <div id="tela-inicial" class="tela ativa">
+        <button id="btn-menu" class="btn-hamburguer" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="centro-inicial">
+            <button id="btn-esquilo" class="btn-esquilo" title="Iniciar Cálculo">
+                <img src="esquilo.jpg" alt="Iniciar Minha Jornada">
+            </button>
+            <p class="legenda-inicio">Toque para calcular sua jornada</p>
+        </div>
+    </div>
+
+    <!-- MENU LATERAL (DRAWER) -->
+    <div id="overlay-menu" class="overlay oculto"></div>
+    <aside id="menu-lateral" class="menu-lateral">
+        <div class="menu-topo">
+            <h2>Menu</h2>
+            <button id="btn-fechar-menu" class="btn-fechar">&times;</button>
+        </div>
+
+        <nav class="menu-opcoes">
+            <button id="btn-abrir-sobre" class="menu-item">Sobre a aplicação</button>
+            <button id="btn-sair" class="menu-item item-sair">SAIR</button>
+        </nav>
+
+        <footer class="menu-rodape">
+            <p>Versão 1.0.0 - <span id="ano-atual"></span></p>
+            <p>Desenvolvido por Rodrigo Silveira – 011545287</p>
+        </footer>
+    </aside>
+
+    <!-- TELA SOBRE A APLICAÇÃO -->
+    <div id="tela-sobre" class="tela">
+        <div class="container-card">
+            <h1 class="titulo-sobre">Minha Jornada app</h1>
+            <div class="texto-sobre">
+                <p><strong>Minha Jornada app</strong> é uma aplicação desenvolvida para facilitar a compreensão da jornada de trabalho dos colaboradores do grupo Zaffari favorecendo o entendimento pleno e eliminando a incidência de falhas no cálculo da carga horária diária e geração de horas negativas.</p>
+                <p>Para calcular o ponto com Minha Jornada app é muito simples, basta inserir no painel o seu horário de entrada e horário de ida ao intervalo que a aplicação calcula automaticamente o seu retorno e a sua saída considerando a nova carga horária de 8h e 24 minutos trabalhados e um intervalo base de 1hora e 6 minutos exigida pelo novo padrão 5 por dois.</p>
+                <p class="destaque-sobre">Agora ficou fácil calcular sua jornada, deixe tudo com Minha Jornada app.</p>
+            </div>
+            <div class="rodape-sobre">
+                <button id="btn-voltar-sobre" class="btn-voltar-direita">Voltar ↩️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TELA DE CÁLCULO (TELA B) -->
+    <div id="tela-calculo" class="tela">
+        <header class="topo-tela-b">
+            <button id="btn-voltar-inicio" class="btn-voltar-topo">↩️ Voltar</button>
+            <h1>Minha Jornada</h1>
+        </header>
+
+        <main class="container-card">
+            <div class="grupo-input">
+                <label for="entrada">1. Horário de Entrada:</label>
+                <input type="time" id="entrada">
+            </div>
+
+            <div class="grupo-input">
+                <label for="ida-intervalo">2. Ida ao Intervalo:</label>
+                <input type="time" id="ida-intervalo">
+            </div>
+
+            <hr class="divisor">
+
+            <div class="grupo-input">
+                <label for="retorno-intervalo">
+                    3. Retorno do Intervalo <small>(Base: 01:06 - Editável)</small>:
+                </label>
+                <input type="time" id="retorno-intervalo">
+                <span id="aviso-intervalo" class="aviso-info"></span>
+            </div>
+
+            <div class="grupo-input resultado-box">
+                <label for="saida">4. Saída Prevista <small>(Jornada 08:24 trabalhadas)</small>:</label>
+                <input type="time" id="saida" readonly>
+            </div>
+
+            <!-- RODAPÉ DE HORAS EXTRAS -->
+            <footer id="rodape-extras" class="rodape-extras oculto">
+                <h3>Controle de Horas Extras (Limite Legal: 10h)</h3>
+                <p>Limite máximo permitido: <strong>+01:36</strong> (Saída até <span id="saida-maxima">--:--</span>)</p>
+                <p class="sugestao-destaque">Sugestão de controle (+01:30): Saída às <strong id="saida-sugerida">--:--</strong></p>
+                <small id="base-calculo-extra"></small>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
