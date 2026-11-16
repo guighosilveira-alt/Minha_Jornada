@@ -8,9 +8,9 @@
   "theme_color": "#005a2b",
   "icons": [
     {
-      "src": "./esquilo.jpeg",
+      "src": "./esquilo.png",
       "sizes": "512x512",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
