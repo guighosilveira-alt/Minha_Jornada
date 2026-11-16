@@ -84,12 +84,11 @@ body, html {
 }
 
 .btn-esquilo {
-    background: none;
+    background-color: var(--verde-zaffari); /* Cor de segurança caso o arquivo não seja encontrado */
     border: 4px solid var(--branco);
     border-radius: 50%;
     width: 340px;
     height: 340px;
-    overflow: hidden;
     cursor: pointer;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     transition: transform 0.2s ease;
