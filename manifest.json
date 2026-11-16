@@ -1,13 +1,14 @@
 {
   "name": "Minha Jornada App",
   "short_name": "Minha Jornada",
-  "start_url": "index.html",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#005a2b",
   "theme_color": "#005a2b",
   "icons": [
     {
-      "src": "esquilo.jpg",
+      "src": "./esquilo.jpeg",
       "sizes": "512x512",
       "type": "image/jpeg",
       "purpose": "any maskable"
