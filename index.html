@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Jornada App - Grupo Zaffari</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
@@ -17,12 +18,11 @@
         </button>
 
         <div class="centro-inicial">
-            <button id="btn-esquilo" class="btn-esquilo" title="Iniciar Cálculo">
-                <img src="esquilo.jpg" alt="Iniciar Minha Jornada">
-            </button>
+            <button id="btn-esquilo" class="btn-esquilo" title="Iniciar Cálculo" style="background-image: url('esquilo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></button>
             <p class="legenda-inicio">Toque no esquilo e calcule sua jornada</p>
         </div>
     </div>
+
 
     <!-- MENU LATERAL (DRAWER) -->
     <div id="overlay-menu" class="overlay oculto"></div>
@@ -49,7 +49,7 @@
             <h1 class="titulo-sobre">Minha Jornada app</h1>
             <div class="texto-sobre">
                 <p><strong>Minha Jornada app</strong> é uma aplicação desenvolvida para facilitar a compreensão da jornada de trabalho dos colaboradores do grupo Zaffari favorecendo o entendimento pleno e eliminando a incidência de falhas no cálculo da carga horária diária e geração de horas negativas.</p>
-                <p>Para calcular o ponto com Minha Jornada app é muito simples, basta inserir no painel o seu horário de entrada e horário de ida ao intervalo que a aplicação calcula automaticamente o seu retorno e a sua saída considerando a nova carga horária de 8h e 24 minutos trabalhados e um intervalo base de 1hora e 6 minutos exigida pelo novo padrão 5 por dois.</p>
+                <p>Para calcular o ponto com Minha Jornada app é muito simples, basta inserir no painel o seu horário de entrada e horário de ida ao intervalo que a aplicação calcula automaticamente o seu retorno e a sua saída considerando a nova carga horária de 8h e 24 minutos trabalhados e um intervalo base de 1hora e 6 minutos sugerida pelo novo padrão 5 por dois.</p>
                 <p class="destaque-sobre">Agora ficou fácil calcular sua jornada, deixe tudo com Minha Jornada app.</p>
             </div>
             <div class="rodape-sobre">
@@ -93,8 +93,9 @@
 
             <!-- RODAPÉ DE HORAS EXTRAS -->
             <footer id="rodape-extras" class="rodape-extras oculto">
-                <h3>Controle de Horas Extras (Limite Legal: 10h)</h3>
-                <p>Limite máximo permitido: <strong>+01:36</strong> (Saída até <span id="saida-maxima">--:--</span>)</p>
+                <h3>Controle de jornada (Limite Legal: 10 horas trabalhadas)</h3>
+                <h3>Referência considerando horas extras: 8h e 24 min + 1h e 36 min extra = 10 horas</h3>
+                <p>Limite máximo horas extras: <strong>+01:36</strong> (Saída até <span id="saida-maxima">--:--</span>)</p>
                 <p class="sugestao-destaque">Sugestão de controle (+01:30): Saída às <strong id="saida-sugerida">--:--</strong></p>
                 <small id="base-calculo-extra"></small>
             </footer>
