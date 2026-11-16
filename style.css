@@ -98,6 +98,7 @@ body, html {
     transform: scale(0.95);
 }
 
+
 .btn-esquilo img {
     width: 100%;
     height: 100%;
@@ -367,4 +368,5 @@ body, html {
     margin-top: 8px;
     color: #92400e;
     font-size: 0.78rem;
-}
+    }
+        
